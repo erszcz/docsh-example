@@ -20,3 +20,6 @@ Hello, Joe!
 ok
 3> 
 ```
+
+(Watch out for `Uncaught error in rebar_core. Run with DEBUG=1 to see stacktrace`.
+Running `shell` again helps.)
