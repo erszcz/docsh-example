@@ -7,6 +7,9 @@
 
 -type name() :: string().
 
+%% TODO: Somehow, rebar3 can't find this include file...
+%-include_lib("docsh/include/docsh.hrl").
+
 %%====================================================================
 %% API functions
 %%====================================================================
