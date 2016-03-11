@@ -1,0 +1,12 @@
+[{<<"docsh">>,
+  {git,"https://github.com/erszcz/docsh",
+       {ref,"e4a84b8c8fe77c06d46784ae13dd73a629a98402"}},
+  0},
+ {<<"edown">>,
+  {git,"git://github.com/uwiger/edown.git",
+       {ref,"d864427506cd93a00712b7c3b9a89d793e7e1600"}},
+  2},
+ {<<"parse_trans">>,
+  {git,"https://github.com/uwiger/parse_trans.git",
+       {ref,"4fadce8a5242479b4ebc0d2b5825bdfe1de0af1c"}},
+  1}].
