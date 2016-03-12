@@ -57,7 +57,7 @@ as shown below:
 ```erlang
 {plugins,
  [
-  {rebar3_docsh, {git, "https://github.com/erszcz/docsh", {branch, "rebar3-plugin"}}}
+  {rebar3_docsh, {git, "https://github.com/erszcz/docsh", {tag, "0.2.0"}}}
  ]}.
 ```
 
