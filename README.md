@@ -3,7 +3,15 @@
 
 ## Try it
 
-Just clone this repo and:
+Clone this repo and check out `local-plugin`:
+
+```
+git clone https://github.com/erszcz/docsh-example
+cd docsh-example
+git checkout local-plugin
+```
+
+See how it works:
 
 ```erlang
 $ ./rebar3 shell 
@@ -26,6 +34,17 @@ ok
 
 (Watch out for `Uncaught error in rebar_core. Run with DEBUG=1 to see stacktrace`.
 Running `shell` again helps.)
+
+You now see it works. Switch back to `master`:
+
+```
+git checkout master
+```
+
+The `local-plugin` branch is completely self contained - no changes
+which might affect other projects are made to your system.
+However, the minimal config (and less overhead due to fewer dependencies)
+is achieved with the setup described in the next section.
 
 
 ## Rebar3 setup
