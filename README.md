@@ -1,4 +1,7 @@
-# [docsh](https://github.com/erszcz/docsh) in action
+# [docsh][gh:docsh] in action
+
+
+## Try it
 
 Just clone this repo and:
 
@@ -23,3 +26,50 @@ ok
 
 (Watch out for `Uncaught error in rebar_core. Run with DEBUG=1 to see stacktrace`.
 Running `shell` again helps.)
+
+
+## Rebar3 setup
+
+This project relies on [rebar3 global plugin support][rebar3:plugins].
+These plugins are downloaded and installed automatically.
+Make sure `rebar3_docsh` plugin is in your `~/.config/rebar3/rebar.config`
+as shown below:
+
+```erlang
+{plugins,
+ [
+  {rebar3_docsh, {git, "https://github.com/erszcz/docsh", {branch, "rebar3-plugin"}}}
+ ]}.
+```
+
+With the plugin in place, the configuration of this project is minimal:
+
+```erlang
+{erl_opts, [debug_info, {core_transform, ct_docsh}]}.
+
+{provider_hooks,
+ [
+  {post, [{compile, {docsh, compile}}]}
+ ]}.
+```
+
+The `{core_transform, ct_docsh}` option enables documentation for all
+modules in the project.
+If you want to be more specific about which modules should provide
+embedded docs and which should not don't use the option.
+Instead, include the header file in your module:
+
+```erlang
+-include_lib("docsh/include/docsh.hrl").
+```
+
+Each approach of enabling the core transformation will embed helper code
+needed for accessing the documentation into your modules.
+The documentation itself is embedded straight into the `.beam` file by the
+post-compile `{docsh, compile}` hook.
+The support code makes your documentation accessible wherever you ship your code.
+No separate doc package - when you deploy your code,
+you automagically deploy your docs.
+
+[gh:docsh]: https://github.com/erszcz/docsh
+[rebar3:plugins]: http://www.rebar3.org/docs/using-available-plugins
