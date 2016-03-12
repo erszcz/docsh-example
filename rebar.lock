@@ -1,6 +1,6 @@
 [{<<"docsh">>,
   {git,"https://github.com/erszcz/docsh",
-       {ref,"e4a84b8c8fe77c06d46784ae13dd73a629a98402"}},
+       {ref,"d0d55beca04a2b8c695f679884ad1fcd39cac114"}},
   0},
  {<<"edown">>,
   {git,"git://github.com/uwiger/edown.git",
