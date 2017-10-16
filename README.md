@@ -1,3 +1,5 @@
+# DEFUNCT: docsh doesn't provide a rebar3 plugin anymore!
+
 # [docsh][gh:docsh] in action
 
 
